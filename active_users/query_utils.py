@@ -32,7 +32,7 @@ def safe_div(op1, op2, default=None):
     except (DivisionByZero, DivisionUndefined, InvalidOperation):
         if default:
             return default
-        return 'inf'
+        return 0
 
 
 def stagger_tuple(elements_list, initial=None):
