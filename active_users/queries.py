@@ -1,6 +1,6 @@
 """Queries for the active_users app."""
-from django.contrib.auth.models import User
 from decimal import Decimal, localcontext
+from django.contrib.auth import get_user_model
 
 from dateutil.relativedelta import relativedelta
 
@@ -9,6 +9,8 @@ from .query_utils import (
     get_months_range, parse_date, safe_div, stagger_tuple,
     get_first_last_day_of_month
 )
+
+User = get_user_model()
 
 
 def get_dau_for_period(start_date, end_date):
