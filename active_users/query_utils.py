@@ -85,11 +85,11 @@ def coerce_to_UTC(date):
 
 
 def parse_date(date_val):
-    type_test = (isinstance(date_val, basestring) or
+    type_test = (isinstance(date_val, str) or
                  isinstance(date_val, datetime))
     assert type_test, "Invalid arguements supplied to parse_date"
 
-    if isinstance(date_val, basestring):
+    if isinstance(date_val, str):
         parsed_date = parseDateString(date_val)
     else:
         parsed_date = date_val
