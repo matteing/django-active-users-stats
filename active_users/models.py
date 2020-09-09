@@ -38,6 +38,7 @@ class Activity(models.Model):
         settings.AUTH_USER_MODEL,
         related_name='activity',
         null=True,
+        blank=True,
         on_delete=models.SET_NULL)
 
     objects = ActivityManager()
