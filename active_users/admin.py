@@ -10,7 +10,7 @@ class ActivityAdmin(admin.ModelAdmin):
     raw_id_fields = ['user']
 
     def user__email(self, obj):
-        return obj.user.email
+        return "user@deleted.null" if not obj.user else obj.user.email
 
 
 admin.site.register(models.Activity, ActivityAdmin)
